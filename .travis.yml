@@ -7,7 +7,7 @@ services:
 
 before_install:
   - echo "start creating an image with dockerfile"
-  - docker build -t weekbelt/docker-react-app -f Dockerfile.dev ./
+  - docker build -t weekbelt/docker-react-app -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true weekbelt/docker-react-app npm run test -- --coverage
